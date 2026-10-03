@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="bn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profile</title>
+<script id="cfg">const CONFIG = {
+  "name": "MOQSUD MIA",
+  "tagline": "Business • Professional • Personal",
+  "about": "আমি একজন ব্যবসায়ী ও পেশাজীবী। এই ওয়েবসাইটে আমার প্রয়োজনীয় যোগাযোগ ও পেশাগত তথ্য রাখা হয়েছে।",
+  "job": "Business / Lab Work",
+  "address": "Alikadam, Bandarban, Bangladesh",
+  "phone": "01XXXXXXXXX",
+  "whatsapp": "01XXXXXXXXX",
+  "facebook": "https://facebook.com/",
+  "instagram": "https://instagram.com/",
+  "org": "Janakallan Diagnostic & Doctor's Chamber",
+  "orgAddr": "Alikadam, Bandarban",
+  "hours": "সকাল ৯টা – রাত ৯টা",
+  "bkash": "01XXXXXXXXX",
+  "nagad": "01XXXXXXXXX",
+  "siteUrl": "",
+  "photo": "",
+  "enc": ""
+};</script>
+<style>
+:root{--navy:#12355b;--teal:#1a8f7a;--bg:#f3f5f9;--line:#e4e8ef;--muted:#6b7686}
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Segoe UI",Roboto,Arial,"Noto Sans Bengali",sans-serif}
+body{background:var(--bg);color:#1c2430;line-height:1.5}
+.container{max-width:680px;margin:auto;padding:14px 14px 30px}
+.card{background:#fff;margin-bottom:14px;padding:22px;border-radius:16px;border:1px solid var(--line);box-shadow:0 2px 10px rgba(18,53,91,.05)}
+.profile{text-align:center;padding:34px 20px 26px;border:0;color:#fff;background:linear-gradient(135deg,var(--navy),#1f5a8a 60%,var(--teal))}
+.profile img{width:124px;height:124px;object-fit:cover;border-radius:50%;border:4px solid rgba(255,255,255,.9);background:#dfe6ee;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.profile h1{margin-top:16px;font-size:26px;letter-spacing:.5px}
+.profile p{margin-top:6px;color:rgba(255,255,255,.85);font-size:14px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.act{background:#fff;color:var(--navy);padding:12px;border-radius:10px;font-weight:600;font-size:15px;text-align:center}
+.act+.act{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7)}
+h2{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:14px;padding-left:10px;border-left:4px solid var(--teal);line-height:1.2}
+.info{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.info:last-child{border-bottom:0}.label{color:var(--muted);font-size:14px}
+.value{text-align:right;word-break:break-word;font-weight:600;font-size:15px}
+a{color:#1769c2;text-decoration:none}
+.btn{border:0;border-radius:10px;padding:13px;background:var(--navy);color:#fff;font-size:15px;font-weight:600;cursor:pointer;width:100%;margin-top:12px}
+.btn:hover{opacity:.9}.btn.ghost{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+input,textarea{width:100%;padding:13px;margin-top:6px;border:1px solid #cfd6e0;border-radius:10px;font-size:16px;background:#fbfcfe}
+input:focus,textarea:focus{outline:2px solid rgba(26,143,122,.35);border-color:var(--teal)}
+textarea{height:110px}
+.ed label{display:block;margin-top:12px;font-weight:600;font-size:13px;color:var(--muted)}
+.social{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.social a{border:1px solid var(--line);padding:12px;border-radius:10px;text-align:center;font-weight:600;color:var(--navy)}
+.qr{text-align:center}.qr h2{text-align:left}
+#qrcode{display:inline-block;margin:14px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.hidden{display:none}.error{color:#c62828;text-align:center;margin-top:10px;font-size:14px}
+.note{font-size:14px;color:var(--muted);line-height:1.7}
+footer{text-align:center;color:var(--muted);padding:14px;font-size:13px}footer a{color:#9aa4b2}
+</style></head><body><div class="container">
+
+<div class="card profile"><img id="pic" alt="" class="hidden">
+<h1 data-t="name"></h1><p data-t="tagline"></p>
+<div class="actions"><a class="act" data-h="tel" data-s="phone">কল করুন</a><a class="act" data-h="wa" data-s="whatsapp" target="_blank">WhatsApp</a></div></div>
+
+<div class="card"><h2>আমার সম্পর্কে</h2><p class="note" data-t="about"></p></div>
+
+<div class="card"><h2>ব্যক্তিগত তথ্য</h2>
+<div class="info"><span class="label">নাম</span><span class="value" data-t="name"></span></div>
+<div class="info"><span class="label">পেশা</span><span class="value" data-t="job"></span></div>
+<div class="info"><span class="label">ঠিকানা</span><span class="value" data-t="address"></span></div></div>
+
+<div class="card"><h2>যোগাযোগ</h2>
+<div class="info"><span class="label">মোবাইল</span><span class="value"><a data-t="phone" data-h="tel"></a></span></div>
+<div class="info"><span class="label">WhatsApp</span><span class="value"><a data-t="whatsapp" data-h="wa" target="_blank"></a></span></div>
+<div class="social" style="margin-top:12px"><a data-h="facebook" target="_blank">Facebook</a><a data-h="instagram" target="_blank">Instagram</a></div></div>
+
+<div class="card"><h2>ব্যবসা / কাজ</h2>
+<div class="info"><span class="label">প্রতিষ্ঠান</span><span class="value" data-t="org"></span></div>
+<div class="info"><span class="label">ঠিকানা</span><span class="value" data-t="orgAddr"></span></div>
+<div class="info"><span class="label">সময়</span><span class="value" data-t="hours"></span></div></div>
+
+<div class="card"><h2>Payment</h2>
+<div class="info"><span class="label">bKash</span><span class="value" data-t="bkash"></span></div>
+<button class="btn ghost" onclick="copyNumber(CONFIG.bkash)">bKash Number Copy</button>
+<div class="info" style="margin-top:12px"><span class="label">Nagad</span><span class="value" data-t="nagad"></span></div>
+<button class="btn ghost" onclick="copyNumber(CONFIG.nagad)">Nagad Number Copy</button></div>
+
+<div class="card"><h2>ব্যক্তিগত গুরুত্বপূর্ণ তথ্য</h2>
+<p class="note">NID, Passport ইত্যাদি দেখতে পাসওয়ার্ড লাগবে।</p>
+<input type="password" id="pw" placeholder="পাসওয়ার্ড লিখুন">
+<button class="btn" onclick="unlock()">দেখুন</button><p id="error" class="error"></p></div>
+
+<div id="privateData" class="card hidden"><h2>Private Information</h2><div id="rows"></div>
+<button class="btn" onclick="lockAgain()">Lock Again</button></div>
+
+<div class="card qr"><h2>আমার QR Code</h2>
+<p class="note">স্ক্যান করলে এই প্রোফাইল খুলবে। ব্যক্তিগত তথ্য পাসওয়ার্ড ছাড়া দেখা যাবে না।</p>
+<div id="qrcode"></div><button class="btn" onclick="downloadQR()">QR Code Save করুন</button></div>
+
+<div id="login" class="card ed hidden"><h2>এডিট লগইন</h2>
+<p class="note" id="lnote"></p>
+<input type="password" id="lpw" placeholder="পাসওয়ার্ড">
+<button class="btn" onclick="editLogin()">লগইন</button><p id="lerr" class="error"></p></div>
+
+<div id="editor" class="card ed hidden"><h2>এডিট</h2>
+<label>প্রোফাইল ছবি</label>
+<img id="prev" class="hidden" alt="" style="width:110px;height:110px;object-fit:cover;border-radius:50%;margin:8px 0;display:block">
+<input id="pfile" type="file" accept="image/*">
+<button class="btn ghost" style="margin-top:8px" onclick="clearPhoto()">ছবি মুছুন</button>
+<div id="f"></div>
+<h2 style="margin-top:22px">ব্যক্তিগত তথ্য</h2>
+<p class="note">প্রতি লাইনে একটা: <b>NID Number: 123...</b></p>
+<textarea id="priv" placeholder="NID Number: ...&#10;Passport Number: ..."></textarea>
+<input id="epw" type="password" placeholder="পাসওয়ার্ড বদলাতে চাইলে নতুনটা লিখুন (১২+ অক্ষর)">
+<button class="btn" onclick="save()">নতুন index.html ডাউনলোড</button>
+<p class="note" style="margin-top:8px">ডাউনলোড হওয়া ফাইলটা GitHub-এ আপলোড করলে সাইটে পরিবর্তন আসবে। ছবিও এই ফাইলের ভেতরেই থাকে।</p>
+</div>
+
+<footer>© 2026 <span data-t="name"></span> · <a href="#" onclick="openLogin();return false">Edit</a></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+if(CONFIG.photo){ $("pic").src = CONFIG.photo; $("pic").classList.remove("hidden"); }
+document.querySelectorAll("[data-t]").forEach(e => e.textContent = CONFIG[e.dataset.t] || "");
+const H = {tel:v=>"tel:"+v, wa:v=>"https://wa.me/"+v.replace(/\D/g,"").replace(/^0/,"880")};
+document.querySelectorAll("[data-h]").forEach(e => {
+  const k = e.dataset.h, v = CONFIG[e.dataset.s || e.dataset.t || k];
+  if(!v){ e.style.display = "none"; return; }
+  const u = H[k] ? H[k](v) : v; if(/^(https?:|tel:)/.test(u)) e.href = u;
+});
+
+async function key(pw, salt, use){
+  const km = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({name:"PBKDF2", salt, iterations:250000, hash:"SHA-256"}, km, {name:"AES-GCM", length:256}, false, [use]);
+}
+async function dec(b64, pw){
+  const b = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  const k = await key(pw, b.slice(0,16), "decrypt");
+  return new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM", iv:b.slice(16,28)}, k, b.slice(28)));
+}
+async function enc(text, pw){
+  const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = new Uint8Array(await crypto.subtle.encrypt({name:"AES-GCM", iv}, await key(pw, salt, "encrypt"), new TextEncoder().encode(text)));
+  const a = new Uint8Array(28 + ct.length); a.set(salt); a.set(iv,16); a.set(ct,28);
+  let s = ""; a.forEach(x => s += String.fromCharCode(x)); return btoa(s);
+}
+async function unlock(){
+  if(!CONFIG.enc){ $("error").textContent = "এখনো কোনো তথ্য যোগ করা হয়নি।"; return; }
+  try{
+    const data = JSON.parse(await dec(CONFIG.enc, $("pw").value));
+    $("rows").textContent = "";
+    data.forEach(([l,v]) => {
+      const d = document.createElement("div"); d.className = "info";
+      const a = document.createElement("span"); a.className = "label"; a.textContent = l;
+      const c = document.createElement("span"); c.className = "value"; c.textContent = v;
+      d.append(a,c); $("rows").append(d);
+    });
+    $("privateData").classList.remove("hidden"); $("error").textContent = ""; $("pw").value = "";
+  }catch(e){ $("error").textContent = "পাসওয়ার্ড সঠিক নয়।"; }
+}
+function lockAgain(){ $("rows").textContent = ""; $("privateData").classList.add("hidden"); }
+function copyNumber(n){ navigator.clipboard.writeText(n).then(() => alert("নম্বর Copy হয়েছে।")); }
+new QRCode($("qrcode"), {text: CONFIG.siteUrl || location.href.split("#")[0].split("?")[0], width:200, height:200});
+function downloadQR(){
+  const c = document.querySelector("#qrcode canvas");
+  if(!c){ alert("QR Code পাওয়া যায়নি।"); return; }
+  const a = document.createElement("a"); a.download = "My-Personal-QR.png"; a.href = c.toDataURL("image/png"); a.click();
+}
+
+const L = {name:"নাম",tagline:"ট্যাগলাইন",about:"আমার সম্পর্কে",job:"পেশা",address:"ঠিকানা",phone:"মোবাইল",whatsapp:"WhatsApp নম্বর",facebook:"Facebook লিংক",instagram:"Instagram লিংক",org:"প্রতিষ্ঠান",orgAddr:"প্রতিষ্ঠানের ঠিকানা",hours:"সময়",bkash:"bKash",nagad:"Nagad",siteUrl:"সাইটের স্থায়ী লিংক (QR এর জন্য, যেমন https://নাম.github.io/profile/)"};
+for(const k in L){
+  const l = document.createElement("label"); l.textContent = L[k];
+  const i = document.createElement(k == "about" ? "textarea" : "input"); i.id = "f_" + k; i.value = CONFIG[k] || "";
+  $("f").append(l,i);
+}
+let SPW = "";
+function openLogin(){
+  $("editor").classList.add("hidden");
+  $("lnote").textContent = CONFIG.enc ? "এডিট করতে পাসওয়ার্ড দিন।" : "প্রথমবার: এডিটের জন্য নতুন পাসওয়ার্ড সেট করুন (কমপক্ষে ১২ অক্ষর)।";
+  $("login").classList.remove("hidden"); $("login").scrollIntoView();
+}
+async function editLogin(){
+  const pw = $("lpw").value, err = $("lerr");
+  try{
+    if(CONFIG.enc){
+      const rows = JSON.parse(await dec(CONFIG.enc, pw));
+      $("priv").value = rows.map(r => r[0] + ": " + r[1]).join("\n");
+    } else if(pw.length < 12){ err.textContent = "পাসওয়ার্ড কমপক্ষে ১২ অক্ষরের দিন।"; return; }
+    SPW = pw; $("lpw").value = ""; err.textContent = "";
+    $("login").classList.add("hidden"); $("editor").classList.remove("hidden"); $("editor").scrollIntoView();
+  }catch(e){ err.textContent = "পাসওয়ার্ড সঠিক নয়।"; }
+}
+async function build(){
+  const o = {}; for(const k in L) o[k] = $("f_" + k).value.trim();
+  const pw = $("epw").value || SPW;
+  if(pw.length < 12){ alert("পাসওয়ার্ড কমপক্ষে ১২ অক্ষরের দিন।"); return; }
+  const rows = $("priv").value.split("\n").map(x => x.trim()).filter(Boolean).map(x => { const i = x.indexOf(":"); return i < 0 ? [x,""] : [x.slice(0,i).trim(), x.slice(i+1).trim()]; });
+  o.photo = PHOTO;
+  o.enc = await enc(JSON.stringify(rows), pw);
+  const doc = document.documentElement.cloneNode(true);
+  doc.querySelector("#cfg").textContent = "const CONFIG = " + JSON.stringify(o, null, 2).replace(/</g, "\\u003c") + ";";
+  ["qrcode","rows","f"].forEach(id => doc.querySelector("#" + id).textContent = "");
+  doc.querySelector("#privateData").classList.add("hidden");
+  doc.querySelector("#editor").classList.add("hidden"); doc.querySelector("#login").classList.add("hidden");
+  doc.querySelector("#priv").textContent = "";
+  const pv = doc.querySelector("#prev"); pv.removeAttribute("src"); pv.classList.add("hidden");
+  const pc = doc.querySelector("#pic"); pc.removeAttribute("src"); pc.classList.add("hidden");
+  return "<!DOCTYPE html>\n" + doc.outerHTML;
+}
+async function save(){
+  const html = await build(); if(!html) return;
+  const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([html], {type:"text/html"})); a.download = "index.html"; a.click();
+}
+
+
+let PHOTO = CONFIG.photo || "";
+function showPrev(){ const p = $("prev"); if(PHOTO){ p.src = PHOTO; p.classList.remove("hidden"); } else { p.removeAttribute("src"); p.classList.add("hidden"); } }
+$("pfile").addEventListener("change", e => {
+  const f = e.target.files[0]; if(!f) return;
+  const img = new Image(), u = URL.createObjectURL(f);
+  img.onload = () => {
+    const S = 400, c = document.createElement("canvas"); c.width = c.height = S;
+    const m = Math.min(img.width, img.height);
+    c.getContext("2d").drawImage(img, (img.width-m)/2, (img.height-m)/2, m, m, 0, 0, S, S);
+    PHOTO = c.toDataURL("image/jpeg", .8); URL.revokeObjectURL(u); showPrev();
+  };
+  img.src = u;
+});
+function clearPhoto(){ PHOTO = ""; $("pfile").value = ""; showPrev(); }
+showPrev();
+</script></body></html>
